@@ -1,9 +1,10 @@
 {
   "name": "ozylog-http-errors",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create HTTP error objects",
   "main": "index.js",
   "scripts": {
+    "prepublish": "gulp build",
     "build": "gulp build"
   },
   "repository": {
