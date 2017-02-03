@@ -1,73 +1,65 @@
 'use strict';
 
 export class BadRequestError extends Error {
-  constructor(message) {
-    super();
+  constructor(message = 'Bad Request') {
+    super(message);
 
-    this.message = message || 'Bad Request';
     this.status = 400;
   }
 }
 
 export class ForbiddenError extends Error {
-  constructor(message) {
+  constructor(message = 'Forbidden') {
     super();
 
-    this.message = message || 'Forbidden';
     this.status = 403;
   }
 }
 
 export class InternalServerError extends Error {
-  constructor(message) {
-    super();
+  constructor(message = 'Internal Server Error') {
+    super(message);
 
-    this.message = message || 'Internal Server Error';
     this.status = 500;
   }
 }
 
 export class NotAcceptableError extends Error {
-  constructor(message) {
-    super();
+  constructor(message = 'Not Acceptable') {
+    super(message);
 
-    this.message = message || 'Not Acceptable';
     this.status = 406;
   }
 }
 
 export class NotFoundError extends Error {
-  constructor(message) {
-    super();
+  constructor(message = 'Not Found') {
+    super(message);
 
-    this.message = message || 'Not Found';
     this.status = 404;
   }
 }
 
 export class NotImplementedError extends Error {
-  constructor(message) {
-    super();
+  constructor(message = 'Not Implemented') {
+    super(message);
 
-    this.message = message || 'Not Implemented';
     this.status = 501;
   }
 }
 
 export class UnauthorizedError extends Error {
-  constructor(message) {
-    super();
+  constructor(message = 'Unauthorized') {
+    super(message );
 
-    this.message = message || 'Unauthorized';
     this.status = 401;
   }
 }
 
 export class CreateError extends Error {
   constructor(message, status) {
-    super();
+    super(message);
 
-    this.message = message;
     this.status = status;
   }
 }
