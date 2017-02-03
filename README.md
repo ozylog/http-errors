@@ -1,44 +1,81 @@
 # ozylog-http-errors
 Create HTTP error objects
 
-## Usage
+## Errors
 ```javascript
-import {BadRequestError, ForbiddenError, InternalServerError, NotAcceptableError} from 'ozylog-http-errors';
-import {NotFoundError, NotImplementedError, UnauthorizedError, CreateError} from 'ozylog-http-errors';
+export class BadRequestError extends Error {
+  constructor(message = 'Bad Request') {
+    super(message);
 
-let err;
+    this.status = 400;
+  }
+}
 
-err = new BadRequestError(message);
-// err.status = 400
-// err.message = message || 'Bad Request'
+export class ForbiddenError extends Error {
+  constructor(message = 'Forbidden') {
+    super();
 
-err = new ForbiddenError(message);
-// err.status = 403
-// err.message = message || 'Forbbiden'
+    this.status = 403;
+  }
+}
 
-err = new InternalServerError(message);
-// err.status = 500
-// err.message = message || 'Internal Server Error'
+export class InternalServerError extends Error {
+  constructor(message = 'Internal Server Error') {
+    super(message);
 
-err = new NotAcceptableError(message);
-// err.status = 406
-// err.message = message || 'Not Acceptable'
+    this.status = 500;
+  }
+}
 
-err = new NotFoundError(message);
-// err.status = 404
-// err.message = message || 'Not Found'
+export class NotAcceptableError extends Error {
+  constructor(message = 'Not Acceptable') {
+    super(message);
 
-err = new NotImplementedError(message);
-// err.status = 501
-// err.message = message || 'Not Implemented'
+    this.status = 406;
+  }
+}
 
-err = new UnauthorizedError(message);
-// err.status = 401
-// err.message = message || 'Unauthorized'
+export class NotFoundError extends Error {
+  constructor(message = 'Not Found') {
+    super(message);
 
-err = new CreateError(message, status);
-// err.status = status
-// err.message = message
+    this.status = 404;
+  }
+}
+
+export class NotImplementedError extends Error {
+  constructor(message = 'Not Implemented') {
+    super(message);
+
+    this.status = 501;
+  }
+}
+
+export class UnauthorizedError extends Error {
+  constructor(message = 'Unauthorized') {
+    super(message);
+
+    this.status = 401;
+  }
+}
+
+export class CreateError extends Error {
+  constructor(message, status) {
+    super(message);
+
+    this.status = status;
+  }
+}
+```
+
+## Usage Example
+```javascript
+import {BadRequestError} from 'ozylog-http-errors';
+
+
+async function validate(req, res, next) {
+  if (!req.name) return next(new BadRequestError());
+}
 ```
 
 ## License
