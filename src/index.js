@@ -50,7 +50,7 @@ export class NotImplementedError extends Error {
 
 export class UnauthorizedError extends Error {
   constructor(message = 'Unauthorized') {
-    super(message );
+    super(message);
 
     this.status = 401;
   }
