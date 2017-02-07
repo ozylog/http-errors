@@ -1,6 +1,6 @@
 {
   "name": "ozylog-http-errors",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Create HTTP error objects",
   "main": "./dist/index.js",
   "scripts": {
