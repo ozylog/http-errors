@@ -10,7 +10,7 @@ export class BadRequestError extends Error {
 
 export class ForbiddenError extends Error {
   constructor(message = 'Forbidden') {
-    super();
+    super(message);
 
     this.status = 403;
   }

@@ -13,7 +13,7 @@ export class BadRequestError extends Error {
 
 export class ForbiddenError extends Error {
   constructor(message = 'Forbidden') {
-    super();
+    super(message);
 
     this.status = 403;
   }
@@ -73,8 +73,8 @@ export class CreateError extends Error {
 import {BadRequestError} from 'ozylog-http-errors';
 
 
-async function validate(req, res, next) {
-  if (!req.name) return next(new BadRequestError());
+export function validate(req, res, next) {
+  if (!req.body.name) return next(new BadRequestError());
 }
 ```
 
