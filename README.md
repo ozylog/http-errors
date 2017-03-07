@@ -1,13 +1,15 @@
 # ozylog-http-errors
 Create HTTP error objects
 
+[![Travis](https://img.shields.io/travis/ozylog/ozylog-http-errors.svg?style=flat-square)](https://travis-ci.org/ozylog/ozylog-http-errors) [![npm](https://img.shields.io/npm/dt/ozylog-http-errors.svg?style=flat-square)](https://www.npmjs.com/package/ozylog-http-errors)
+
 ## Installation
 
 ```
 npm install ozylog-http-errors --save
 ```
 
-## List of error classes
+## List of errors
 ```
 - BadRequestError([message = 'Bad Request'])
 - ForbiddenError([message = 'Forbidden'])
