@@ -4,9 +4,9 @@
   "description": "Create HTTP error objects",
   "main": "./dist/index.js",
   "scripts": {
-    "prepublish": "ozylog-node-boilerplate build",
-    "build": "ozylog-node-boilerplate build",
-    "watch": "ozylog-node-boilerplate watch"
+    "prepublish": "ozylog-boilerplate node:build",
+    "build": "ozylog-boilerplate node:build",
+    "watch": "ozylog-boilerplate node:watch"
   },
   "repository": {
     "type": "git",
@@ -18,12 +18,12 @@
     "error"
   ],
   "author": "Cahya Pribadi <ozylog@gmail.com>",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/ozylog/ozylog-http-errors/issues"
   },
   "homepage": "https://github.com/ozylog/ozylog-http-errors#readme",
   "devDependencies": {
-    "@ozylog/ozylog-node-boilerplate": "^0.2.6"
+    "ozylog-boilerplate": "^0.1.3"
   }
 }
