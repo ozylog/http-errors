@@ -1,16 +1,16 @@
 {
-  "name": "ozylog-http-errors",
+  "name": "@ozylog/http-errors",
   "version": "1.0.10",
   "description": "Create HTTP error objects",
   "main": "./dist/index.js",
   "scripts": {
-    "prepublish": "ozylog-boilerplate node:build",
-    "build": "ozylog-boilerplate node:build",
-    "watch": "ozylog-boilerplate node:watch"
+    "prepublish": "boilerplate --build=node",
+    "build": "boilerplate --build=node",
+    "watch": "boilerplate --watch=node"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ozylog/ozylog-http-errors.git"
+    "url": "git+https://github.com/ozylog/http-errors.git"
   },
   "keywords": [
     "ozylog",
@@ -20,10 +20,10 @@
   "author": "Cahya Pribadi <ozylog@gmail.com>",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/ozylog/ozylog-http-errors/issues"
+    "url": "https://github.com/ozylog/http-errors/issues"
   },
-  "homepage": "https://github.com/ozylog/ozylog-http-errors#readme",
+  "homepage": "https://github.com/ozylog/http-errors#readme",
   "devDependencies": {
-    "ozylog-boilerplate": "^0.1.3"
+    "@ozylog/boilerplate": "^0.6.9"
   }
 }

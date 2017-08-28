@@ -5,7 +5,7 @@ export class BadRequestError extends Error {
     super();
 
     this.message = message; // support object
-    this.status = 400;
+    this.statusCode = 400;
   }
 }
 
@@ -14,7 +14,7 @@ export class ForbiddenError extends Error {
     super();
 
     this.message = message;
-    this.status = 403;
+    this.statusCode = 403;
   }
 }
 
@@ -23,7 +23,7 @@ export class InternalServerError extends Error {
     super();
 
     this.message = message;
-    this.status = 500;
+    this.statusCode = 500;
   }
 }
 
@@ -32,7 +32,7 @@ export class NotAcceptableError extends Error {
     super();
 
     this.message = message;
-    this.status = 406;
+    this.statusCode = 406;
   }
 }
 
@@ -41,7 +41,7 @@ export class NotFoundError extends Error {
     super();
 
     this.message = message;
-    this.status = 404;
+    this.statusCode = 404;
   }
 }
 
@@ -50,7 +50,7 @@ export class NotImplementedError extends Error {
     super();
 
     this.message = message;
-    this.status = 501;
+    this.statusCode = 501;
   }
 }
 
@@ -59,7 +59,7 @@ export class UnauthorizedError extends Error {
     super();
 
     this.message = message;
-    this.status = 401;
+    this.statusCode = 401;
   }
 }
 
@@ -68,6 +68,6 @@ export class CreateError extends Error {
     super();
 
     this.message = message;
-    this.status = status;
+    this.statusCode = status;
   }
 }
